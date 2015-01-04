@@ -17,8 +17,11 @@ Environment Installation Guide
 15. apt-get install tomcat-7
 16. iptables -t nat -I PREROUTING -p tcp --dport 80 -j REDIRECT --to-ports 8080
 17. iptables -t nat -I OUTPUT -p tcp --dport 80 -j REDIRECT --to-ports 8080
-
-* var/lib/tomcat7/webapps/ROOT
+18. apt-get install git
+19. cd var/lib/tomcat7/webapps/
+20. rm -r ROOT
+21. git config --global user.name "rsamokhin"
+22. git config --global user.email poshliemail@googlemail.com
  
 
 Translation cards
