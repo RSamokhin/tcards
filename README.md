@@ -12,20 +12,14 @@ Environment Installation Guide
 10. apt-get install openjdk-7-jdk
 11. nano ~/.bashrc
 12. export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-i386/
-    export CATALINA_HOME=/opt/tomcat
 13. chmod +x ~/.bashrc 
 14. . ~/.bashrc
-15. $CATALINA_HOME/bin/startup.sh
-16. groupadd tomcat
-17. useradd -s /sbin/nologin -g tomcat -d /opt/tomcat/ tomcat
-18. passwd tomcat
-18. chown -R tomcat.tomcat /opt/tomcat/
-19. chmod 775 /opt/tomcat/webapps/
-20. iptables -t nat -I PREROUTING -p tcp --dport 80 -j REDIRECT --to-ports 8080
-21. iptables -t nat -I OUTPUT -p tcp --dport 80 -j REDIRECT --to-ports 8080
+15. apt-get install tomcat-7
+16. iptables -t nat -I PREROUTING -p tcp --dport 80 -j REDIRECT --to-ports 8080
+17. iptables -t nat -I OUTPUT -p tcp --dport 80 -j REDIRECT --to-ports 8080
 
-
-
+* var/lib/tomcat7/webapps/ROOT
+ 
 
 Translation cards
 ======
