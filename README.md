@@ -31,6 +31,13 @@ Environment Installation Guide
     <Valapp className="org.apache.catalina.valapps.RemoteAddrValapp" deny="*" />
 </Context>
 ```
+27. cd /; mkdir opt; cd opt;
+28. git clone https://github.com/RSamokhin/tcards/tree/master/web
+29. ln -s /opt/tcards/web/ ROOT
+30. crontab -e
+```
+* * * * * cd /opt/tcards; git pull
+```
 
 Translation cards structure
 ======
