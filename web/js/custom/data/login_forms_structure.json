@@ -1,0 +1,98 @@
+{
+    "fieldsArray":[
+        {
+            "id":1,
+            "name":"labelDiv",
+            "func":"$('<div/>').addClass('label-icon').text('TCards');"
+        },{
+            "id":2,
+            "name":"birdDiv",
+            "func":"$('<div/>').addClass('bird-icon');"
+        },{
+            "id":3,
+            "name":"mainBlockRow",
+            "func":"$('<div/>').addClass('row main-block-row');"
+        },{
+            "id":4,
+            "name":"mainBlockDiv",
+            "func":"$('<div/>').addClass('small-12 columns main-block-div');"
+        },{
+            "id":5,
+            "name":"loginBlockRow",
+            "func":"$('<div/>').addClass('row login-block-row');"
+        },{
+            "id":6,
+            "name":"loginBlockTopOffset",
+            "func":"$('<div/>').addClass('small-8 columns small-offset-2 login-block-top-offset');"
+        },{
+            "id":7,
+            "name":"loginBlockDiv",
+            "func":"$('<div/>').addClass('small-8 columns small-offset-2 login-block-div');"
+        },{
+            "id":8,
+            "name":"loginBlockInnerRow",
+            "func":"$('<div/>').addClass('row login-block-inner-row');"
+        },{
+            "id":9,
+            "name":"loginBlockLabel",
+            "func":"$('<div/>').addClass('small-12 columns login-block-label').text('Login your account');"
+        },{
+            "id":10,
+            "name":"loginBlockEmail",
+            "func":"$('<div/>').addClass('small-8 small-offset-2 columns login-block-email');"
+        },{
+            "id":11,
+            "name":"loginBlockPwd",
+            "func":"$('<div/>').addClass('small-8 small-offset-2 columns login-block-pwd');"
+        },{
+            "id":12,
+            "name":"loginBlockEmailInput",
+            "func":"$('<input/>').addClass('login-input email-input').attr({'type':'text','placeholder':'E-mail'});"
+        },{
+            "id":13,
+            "name":"loginBlockPwdInput",
+            "func":"$('<input/>').addClass('login-input pwd-input').attr({'type':'password','placeholder':'Password'});"
+        },{
+            "id":14,
+            "name":"loginBlockButtonsRow",
+            "func":"$('<div/>').addClass('columns small-8 small-offset-2 login-block-buttons-row');"
+        },{
+            "id":15,
+            "name":"loginBlockHr",
+            "func":"$('<hr/>');"
+        },{
+            "id":16,
+            "name":"loginButtonDiv",
+            "func":"$('<div/>').addClass('small-6 columns login-button-div');"
+        },{
+            "id":17,
+            "name":"loginButton",
+            "func":"$('<a/>').addClass('button login-button expand').attr({'href':'#'}).text('Log In');"
+        },{
+            "id":18,
+            "name":"registerButtonDiv",
+            "func":"$('<div/>').addClass('small-6 columns register-button-div');"
+        },{
+            "id":19,
+            "name":"registerButton",
+            "func":"$('<a/>').addClass('button register-button expand').attr({'href':'#'}).text('Register');"
+        },{
+            "id":20,
+            "name":"loginBlockBotOffset",
+            "func":"$('<div/>').addClass('small-8 columns small-offset-2 end login-block-bot-offset');"
+        },{
+            "id":21,
+            "name":"loginBlockBotFooter",
+            "func":"$('<div/>').addClass('small-8 columns small-offset-2 login-block-bot-footer').html('Translation Cards by SRG &copy; '+new Date().getFullYear());"
+        }
+    ],
+    "fieldSets":[
+        {
+            "name":"loginFieldSet"
+        },{
+            "name":"registerFieldSet"
+        },{
+            "name":"defaultFieldSet"
+        }
+    ]
+}

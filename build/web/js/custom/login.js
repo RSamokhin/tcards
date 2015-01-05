@@ -6,6 +6,9 @@
 
 pageType = 'login';
 document.title = 'Translation cards';
+
+
+// inserted in JSON
 labelDiv = $('<div/>').addClass('label-icon').text('TCards');
 birdDiv = $('<div/>').addClass('bird-icon');
 mainBlockRow = $('<div/>').addClass('row main-block-row');
@@ -37,6 +40,9 @@ registerButton = $('<a/>').addClass('button register-button expand').attr({
 }).text('Register');
 loginBlockBotOffset = $('<div/>').addClass('small-8 columns small-offset-2 end login-block-bot-offset');
 loginBlockBotFooter = $('<div/>').addClass('small-8 columns small-offset-2 login-block-bot-footer').html('Translation Cards by SRG &copy; '+new Date().getFullYear());
+
+//Inserted in JSON
+
 
 birdDiv.appendTo($('body'));
 labelDiv.appendTo($('body'));
