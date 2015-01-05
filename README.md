@@ -15,14 +15,17 @@ Environment Installation Guide
 13. chmod +x ~/.bashrc 
 14. . ~/.bashrc
 15. apt-get install tomcat-7
-16. iptables -t nat -I PREROUTING -p tcp --dport 80 -j REDIRECT --to-ports 8080
-17. iptables -t nat -I OUTPUT -p tcp --dport 80 -j REDIRECT --to-ports 8080
-18. apt-get install git
-19. cd var/lib/tomcat7/webapps/
-20. rm -r ROOT
-21. git config --global user.name "rsamokhin"
-22. git config --global user.email poshliemail@googlemail.com
+16. apt-get install iptables-persistent
+17. iptables -t nat -I PREROUTING -p tcp --dport 80 -j REDIRECT --to-ports 8080
+18. iptables -t nat -I OUTPUT -p tcp --dport 80 -j REDIRECT --to-ports 8080
+19. iptables-save > /etc/iptables/rules.v4
+20. apt-get install git
+21. cd var/lib/tomcat7/webapps/
+22. rm -r ROOT
+23. git config --global user.name "rsamokhin"
+24. git config --global user.email poshliemail@googlemail.com
+25. chmod 777 ROOT
  
 
-Translation cards
+Translation cards structure
 ======
