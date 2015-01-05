@@ -12,6 +12,10 @@ and open the template in the editor.
 }
 body{
     overflow: hidden;
+   /* background-image: url('../../images/custom/custom-background sign.png');
+    background-repeat: no-repeat;
+    background-position: left top;
+    */
 }
 .main-block-div{
     height: 100%;
@@ -37,7 +41,7 @@ body{
     height: 50px;
     text-align: center;
     vertical-align: middle;
-    color: teal;
+    color: steelblue;
     font-family: fantasy;
     padding-top: 15px;
     font-size: 25px;
@@ -51,10 +55,6 @@ body{
     height: 50px;
     margin-bottom: 10px;
 }
-.login-block-pwd{
-    height: 50px;    
-    margin-bottom: 10px;
-}
 .login-block-buttons-row{
     height: 50px;
 }
@@ -64,4 +64,26 @@ body{
     text-align: center;
     font-size: 15px;
     font-family: cursive;
+    color: steelblue;
+}
+.bird-icon{
+    background-image: url('../../images/custom/icon-bird.png');
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 128px;
+    height: 128px;
+}
+.label-icon{
+    position: absolute; 
+    top: 20px;
+    right: 20px;
+    font-family: fantasy;
+    font-size: 90px;
+    font-style: oblique;
+    color: steelblue;
+}
+.login-input{
+    font-family: fantasy !important;
+    font-size: 22px !important;
 }

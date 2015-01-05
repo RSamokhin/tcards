@@ -4,7 +4,10 @@
  * and open the template in the editor.
  */
 
+pageType = 'login';
 document.title = 'Translation cards';
+labelDiv = $('<div/>').addClass('label-icon').text('TCards');
+birdDiv = $('<div/>').addClass('bird-icon');
 mainBlockRow = $('<div/>').addClass('row main-block-row');
 mainBlockDiv = $('<div/>').addClass('small-12 columns main-block-div');
 loginBlockRow = $('<div/>').addClass('row login-block-row');
@@ -35,23 +38,42 @@ registerButton = $('<a/>').addClass('button register-button expand').attr({
 loginBlockBotOffset = $('<div/>').addClass('small-8 columns small-offset-2 end login-block-bot-offset');
 loginBlockBotFooter = $('<div/>').addClass('small-8 columns small-offset-2 login-block-bot-footer').html('Translation Cards by SRG &copy; '+new Date().getFullYear());
 
+birdDiv.appendTo($('body'));
+labelDiv.appendTo($('body'));
+buildLoginInterface();
 
-mainBlockRow.appendTo($('body'));
-mainBlockDiv.appendTo(mainBlockRow);
-loginBlockRow.appendTo(mainBlockDiv);
-loginBlockTopOffset.appendTo(loginBlockRow);
-loginBlockDiv.appendTo(loginBlockRow);
-loginBlockBotOffset.appendTo(loginBlockRow);
-loginBlockInnerRow.appendTo(loginBlockDiv);
-loginBlockLabel.appendTo(loginBlockInnerRow);
-loginBlockEmail.appendTo(loginBlockInnerRow);
-loginBlockPwd.appendTo(loginBlockInnerRow);
-loginBlockEmailInput.appendTo(loginBlockEmail);
-loginBlockPwdInput.appendTo(loginBlockPwd);
-loginBlockHr.appendTo(loginBlockInnerRow);
-loginBlockButtonsRow.appendTo(loginBlockInnerRow);
-loginButtonDiv.appendTo(loginBlockButtonsRow);
-registerButtonDiv.appendTo(loginBlockButtonsRow);
-loginButton.appendTo(loginButtonDiv);
-registerButton.appendTo(registerButtonDiv);
-loginBlockBotFooter.appendTo(loginBlockBotOffset);
+function buildLoginInterface(){
+    pageType='login';
+    $('.main-block-row').remove();
+    mainBlockRow.appendTo($('body'));
+    mainBlockDiv.appendTo(mainBlockRow);
+    loginBlockRow.appendTo(mainBlockDiv);
+    loginBlockTopOffset.appendTo(loginBlockRow);
+    loginBlockDiv.appendTo(loginBlockRow);
+    loginBlockBotOffset.appendTo(loginBlockRow);
+    loginBlockInnerRow.appendTo(loginBlockDiv);
+    loginBlockLabel.appendTo(loginBlockInnerRow);
+    loginBlockEmail.appendTo(loginBlockInnerRow);
+    loginBlockPwd.appendTo(loginBlockInnerRow);
+    loginBlockEmailInput.appendTo(loginBlockEmail);
+    loginBlockPwdInput.appendTo(loginBlockPwd);
+    loginBlockHr.appendTo(loginBlockInnerRow);
+    loginBlockButtonsRow.appendTo(loginBlockInnerRow);
+    loginButtonDiv.appendTo(loginBlockButtonsRow);
+    registerButtonDiv.appendTo(loginBlockButtonsRow);
+    loginButton.appendTo(loginButtonDiv);
+    registerButton.appendTo(registerButtonDiv);
+    loginBlockBotFooter.appendTo(loginBlockBotOffset);
+}
+function buildRegisterInterface(){
+    $('.main-block-row').remove();
+    pageType='register';
+}
+$('.login-button').bind('click',function(){
+    if(pageType!=='login')
+        buildLoginInterface();
+});
+$('.register-button').bind('click',function(){
+    if(pageType!=='register')
+        buildRegisterInterface();
+});
