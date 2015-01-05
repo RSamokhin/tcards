@@ -27,8 +27,7 @@ Environment Installation Guide
 27. cd /; mkdir opt; cd opt;
 28. git clone https://github.com/RSamokhin/tcards/tree/master/web
 29. ln -s /opt/tcards/web/ ROOT
-30. crontab -e
-    * * * * * cd /opt/tcards; git pull
+30. crontab -e --> (* * * * * cd /opt/tcards; git pull)
 
 
 Translation cards structure
