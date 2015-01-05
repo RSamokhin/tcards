@@ -25,6 +25,10 @@ Environment Installation Guide
 23. git config --global user.name "rsamokhin"
 24. git config --global user.email poshliemail@googlemail.com
 25. chmod 777 ROOT
+26. modify /var/lib/tomcat7/conf/server.xml
+    <Context path="/.git" docBase="" >
+      <Valapp className="org.apache.catalina.valapps.RemoteAddrValapp" deny="*" />
+    </Context>
  
 
 Translation cards structure
