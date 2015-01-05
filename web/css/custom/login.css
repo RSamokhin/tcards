@@ -17,11 +17,12 @@ body{
     height: 100%;
 }
 .login-block-top-offset{
-    height: 30%;
+    height: 30% !important;
 }
 .login-block-bot-offset{
-    height: 30%;
     float:left !important;
+    position: absolute;
+    bottom: 20px;
 }
 .login-block-div{
     height: 260px;
@@ -56,4 +57,11 @@ body{
 }
 .login-block-buttons-row{
     height: 50px;
+}
+.login-block-bot-footer{
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+    font-size: 15px;
+    font-family: cursive;
 }

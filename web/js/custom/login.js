@@ -33,6 +33,8 @@ registerButton = $('<a/>').addClass('button register-button expand').attr({
     'href':'#'
 }).text('Register');
 loginBlockBotOffset = $('<div/>').addClass('small-8 columns small-offset-2 end login-block-bot-offset');
+loginBlockBotFooter = $('<div/>').addClass('small-8 columns small-offset-2 login-block-bot-footer').html('Translation Cards by SRG &copy; '+new Date().getFullYear());
+
 
 mainBlockRow.appendTo($('body'));
 mainBlockDiv.appendTo(mainBlockRow);
@@ -52,3 +54,4 @@ loginButtonDiv.appendTo(loginBlockButtonsRow);
 registerButtonDiv.appendTo(loginBlockButtonsRow);
 loginButton.appendTo(loginButtonDiv);
 registerButton.appendTo(registerButtonDiv);
+loginBlockBotFooter.appendTo(loginBlockBotOffset);
