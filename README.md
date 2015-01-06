@@ -10,12 +10,13 @@ Environment Installation Guide
 12. export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-i386/
 13. chmod +x ~/.bashrc 
 14. . ~/.bashrc
-15. apt-get install tomcat-7
+15. apt-get install tomcat7
 20. apt-get install git
-21. cd var/lib/tomcat7/webapps/
+21. cd /var/lib/tomcat7/webapps/
 22. rm -r ROOT
-27. cd /; mkdir opt; cd opt;
-28. git clone https://github.com/RSamokhin/tcards/tree/master/web
+27. cd /; mkdir opt; cd /opt;
+28. git clone https://github.com/RSamokhin/tcards/
+29. cd /var/lib/tomcat7/webapps/
 29. ln -s /opt/tcards/web/ ROOT
 30. crontab -e --> (* * * * * cd /opt/tcards; git pull)
 
