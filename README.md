@@ -19,6 +19,7 @@ Environment Installation Guide
 29. cd /var/lib/tomcat7/webapps/
 29. ln -s /opt/tcards/web/ ROOT
 30. crontab -e --> (* * * * * cd /opt/tcards; git pull)
+31. nano /etc/rc.local -->(iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to 8080)
 
 
 Translation cards structure
