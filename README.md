@@ -17,6 +17,11 @@ Environment Installation Guide
 30. crontab -e --> (* * * * * cd /opt/tcards; git pull)
 31. nano /etc/rc.local -->(iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to 8080)
 32. apt-get install postgresql postgresql-client
+33. su - postgres
+34. psql 
+35. CREATE USER tcards WITH PASSWORD '******';
+35. CREATE DATABASE tcards OWNER tcards;
+36. \q
 
 
 Translation cards structure
