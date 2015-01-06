@@ -6,10 +6,6 @@ Environment Installation Guide
 8. apt-get install default-jre
 9. apt-get install default-jdk
 10. apt-get install openjdk-7-jdk
-11. nano ~/.bashrc
-12. export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-i386/
-13. chmod +x ~/.bashrc 
-14. . ~/.bashrc
 15. apt-get install tomcat7
 20. apt-get install git
 21. cd /var/lib/tomcat7/webapps/
@@ -20,6 +16,7 @@ Environment Installation Guide
 29. ln -s /opt/tcards/web/ ROOT
 30. crontab -e --> (* * * * * cd /opt/tcards; git pull)
 31. nano /etc/rc.local -->(iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to 8080)
+32. apt-get install postgresql postgresql-client
 
 
 Translation cards structure
