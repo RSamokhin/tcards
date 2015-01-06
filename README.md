@@ -22,6 +22,11 @@ Environment Installation Guide
 35. CREATE USER tcards WITH PASSWORD '******';
 35. CREATE DATABASE tcards OWNER tcards;
 36. \q
+37. nano /etc/postgresql/9.1/main/pg_hba.conf ->( local all all md5)  
+38. service postgresql restart
+39. psql tcards tcards
+40. CREATE SCHEMA tcards;
+41. \q
 
 
 Translation cards structure
