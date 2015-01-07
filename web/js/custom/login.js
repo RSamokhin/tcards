@@ -39,7 +39,7 @@ registerButton = $('<a/>').addClass('button register-button expand').attr({
     'href':'#'
 }).text('Register');
 loginBlockBotOffset = $('<div/>').addClass('small-8 columns small-offset-2 end login-block-bot-offset');
-loginBlockBotFooter = $('<div/>').addClass('small-8 columns small-offset-2 login-block-bot-footer').html('Translation Cards by SRG &copy; '+new Date().getFullYear());
+loginBlockBotFooter = $('<div/>').addClass('login-block-bot-footer').html('Translation Cards by SRG &copy; '+new Date().getFullYear());
 
 //Inserted in JSON
 
@@ -69,7 +69,7 @@ function buildLoginInterface(){
     registerButtonDiv.appendTo(loginBlockButtonsRow);
     loginButton.appendTo(loginButtonDiv);
     registerButton.appendTo(registerButtonDiv);
-    loginBlockBotFooter.appendTo(loginBlockBotOffset);
+    loginBlockBotFooter.appendTo($('body'));
 }
 function buildRegisterInterface(){
     $('.main-block-row').remove();
