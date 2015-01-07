@@ -9,7 +9,7 @@ document.title = 'Translation cards';
 
 
 // inserted in JSON
-labelDiv = $('<div/>').addClass('label-icon').text('TCards');
+labelDiv = $('<div/>').addClass('label-icon').html('TCards');
 birdDiv = $('<div/>').addClass('bird-icon');
 mainBlockRow = $('<div/>').addClass('row main-block-row');
 mainBlockDiv = $('<div/>').addClass('small-12 columns main-block-div');
@@ -46,6 +46,8 @@ loginBlockBotFooter = $('<div/>').addClass('login-block-bot-footer').html('Trans
 
 birdDiv.appendTo($('body'));
 labelDiv.appendTo($('body'));
+loginBlockBotFooter.appendTo($('body'));
+
 buildLoginInterface();
 
 function buildLoginInterface(){
@@ -69,7 +71,6 @@ function buildLoginInterface(){
     registerButtonDiv.appendTo(loginBlockButtonsRow);
     loginButton.appendTo(loginButtonDiv);
     registerButton.appendTo(registerButtonDiv);
-    loginBlockBotFooter.appendTo($('body'));
 }
 function buildRegisterInterface(){
     $('.main-block-row').remove();

@@ -3,63 +3,149 @@
         {
             "id":1,
             "name":"labelDiv",
-            "func":"$('<div/>').addClass('label-icon').text('TCards');"
+            "type":"div",
+            "class":[
+                "label-icon"
+            ],
+            "html":"'TCards'"
         },{
             "id":2,
             "name":"birdDiv",
-            "func":"$('<div/>').addClass('bird-icon');"
+            "type":"div",
+            "class":[
+                "bird-icon"
+            ]
         },{
             "id":3,
             "name":"mainBlockRow",
-            "func":"$('<div/>').addClass('row main-block-row');"
+            "type":"div",
+            "class":[
+                "row",
+                "main-block-row"
+            ]
         },{
             "id":4,
             "name":"mainBlockDiv",
-            "func":"$('<div/>').addClass('small-12 columns main-block-div');"
+            "type":"div",
+            "class":[
+                "small-12", 
+                "columns",
+                "main-block-div"
+            ]
         },{
             "id":5,
             "name":"loginBlockRow",
-            "func":"$('<div/>').addClass('row login-block-row');"
+            "type":"div",
+            "class":[
+                "row",
+                "login-block-row"
+            ]
         },{
             "id":6,
             "name":"loginBlockTopOffset",
-            "func":"$('<div/>').addClass('small-8 columns small-offset-2 login-block-top-offset');"
+            "type":"div",
+            "class":[
+                "small-8",
+                "columns",
+                "small-offset-2",
+                "login-block-top-offset"
+            ]
         },{
             "id":7,
             "name":"loginBlockDiv",
-            "func":"$('<div/>').addClass('small-8 columns small-offset-2 login-block-div');"
+            "type":"div",
+            "class":[
+                "small-8",
+                "columns",
+                "small-offset-2",
+                "login-block-div"
+            ]
         },{
             "id":8,
             "name":"loginBlockInnerRow",
-            "func":"$('<div/>').addClass('row login-block-inner-row');"
+            "type":"div",
+            "class":[
+                "row",
+                "login-block-inner-row"
+            ]
         },{
             "id":9,
             "name":"loginBlockLabel",
-            "func":"$('<div/>').addClass('small-12 columns login-block-label').text('Login your account');"
+            "type":"div",
+            "class":[
+                "small-12",
+                "columns",
+                "login-block-label"
+            ],
+            "html":"'Login your account'"
         },{
             "id":10,
             "name":"loginBlockEmail",
-            "func":"$('<div/>').addClass('small-8 small-offset-2 columns login-block-email');"
+            "type":"div",
+            "class":[
+                "small-8",
+                "small-offset-2",
+                "columns",
+                "login-block-email"
+            ]
         },{
             "id":11,
             "name":"loginBlockPwd",
-            "func":"$('<div/>').addClass('small-8 small-offset-2 columns login-block-pwd');"
+            "type":"div",
+            "class":[
+                "small-8",
+                "small-offset-2",
+                "columns",
+                "login-block-pwd"
+            ]
         },{
             "id":12,
             "name":"loginBlockEmailInput",
-            "func":"$('<input/>').addClass('login-input email-input').attr({'type':'text','placeholder':'E-mail'});"
+            "type":"input",
+            "class":[
+                "login-input",
+                "email-input"
+            ],
+            "attr":[
+                {
+                    "name":"type",
+                    "value":"text"
+                },{
+                    "name":"placeholder",
+                    "value":"E-mail"
+                }
+            ]
         },{
             "id":13,
             "name":"loginBlockPwdInput",
-            "func":"$('<input/>').addClass('login-input pwd-input').attr({'type':'password','placeholder':'Password'});"
+            "type":"input",
+            "class":[
+                "login-input",
+                "pwd-input"
+            ],
+            "attr":[
+                {
+                    "name":"type",
+                    "value":"password"
+                },{
+                    "name":"placeholder",
+                    "value":"Password"
+                }
+            ]
         },{
             "id":14,
             "name":"loginBlockButtonsRow",
-            "func":"$('<div/>').addClass('columns small-8 small-offset-2 login-block-buttons-row');"
+            "type":"div",
+            "class":[
+                "columns",
+                "small-8",
+                "small-offset-2",
+                "login-block-buttons-row"
+            ]
         },{
             "id":15,
             "name":"loginBlockHr",
-            "func":"$('<hr/>');"
+            "type":"hr"
         },{
             "id":16,
             "name":"loginButtonDiv",
@@ -67,23 +153,63 @@
         },{
             "id":17,
             "name":"loginButton",
-            "func":"$('<a/>').addClass('button login-button expand').attr({'href':'#'}).text('Log In');"
+            "type":"a",
+            "class":[
+                "button",
+                "login-button",
+                "expand"
+            ],
+            "attr":[
+                {
+                    "name":"href",
+                    "value":"#"
+                }
+            ],
+            "html":"'Log In'"
         },{
             "id":18,
             "name":"registerButtonDiv",
-            "func":"$('<div/>').addClass('small-6 columns register-button-div');"
+            "type":"div",
+            "class":[
+                "small-6",
+                "columns",
+                "register-button-div"
+            ]
         },{
             "id":19,
             "name":"registerButton",
-            "func":"$('<a/>').addClass('button register-button expand').attr({'href':'#'}).text('Register');"
+            "type":"a",
+            "class":[
+                "button",
+                "register-button",
+                "expand"
+            ],
+            "attr":[
+                {
+                    "name":"href",
+                    "value":"#"
+                }
+            ],
+            "html":"'Register'"
         },{
             "id":20,
             "name":"loginBlockBotOffset",
-            "func":"$('<div/>').addClass('small-8 columns small-offset-2 end login-block-bot-offset');"
+            "type":"div",
+            "class":[
+                "small-8",
+                "columns",
+                "small-offset-2",
+                "end",
+                "login-block-bot-offset"
+            ]
         },{
             "id":21,
             "name":"loginBlockBotFooter",
-            "func":"$('<div/>').addClass('small-8 columns small-offset-2 login-block-bot-footer').html('Translation Cards by SRG &copy; '+new Date().getFullYear());"
+            "type":"div",
+            "class":[
+                "login-block-bot-footer"
+            ],
+            "html":"'Translation Cards by SRG &copy; '+new Date().getFullYear()"
         }
     ],
     "fieldSets":[
