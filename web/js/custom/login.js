@@ -8,7 +8,8 @@ pageType = 'login';
 document.title = 'Translation cards';
 
 
-// inserted in JSON
+// inserted in JSON?
+/*
 labelDiv = $('<div/>').addClass('label-icon').html('TCards');
 birdDiv = $('<div/>').addClass('bird-icon');
 mainBlockRow = $('<div/>').addClass('row main-block-row');
@@ -49,7 +50,7 @@ labelDiv.appendTo($('body'));
 loginBlockBotFooter.appendTo($('body'));
 
 buildLoginInterface();
-
+*/
 function buildLoginInterface(){
     pageType='login';
     $('.main-block-row').remove();
@@ -84,3 +85,54 @@ $('.register-button').bind('click',function(){
     if(pageType!=='register')
         buildRegisterInterface();
 });
+
+
+
+
+
+
+pageStructure = getStructureData('login_forms_structure');
+formSructureSet(pageStructure,'defaultFieldSet');
+
+function getStructureData(url){
+    structure = {};
+    $.ajax({
+        url:('../js/custom/data/'+url+'.json'),
+        async:false,
+        dataType: 'json'
+    }).done(function(data){
+        structure=data;
+    });
+    return structure;
+}
+
+function formSructureSet(structure,set){
+   for(var cset in structure['fieldSets']){
+       if ((structure['fieldSets'])[cset]["name"]===set){
+           tset = (structure['fieldSets'])[cset]['set'];
+           tset.forEach(function(el){
+               createStructureTree(el);
+           });
+       }
+   }
+   function createStructureTree(el,parent){
+        parent = parent || '';
+        switch(el['type']){
+            case 'link':
+                for(var field in structure.fieldsArray){
+                    if(structure.fieldsArray[field]['id']===el['el']){
+                        
+                        break;
+                    }
+                }
+                
+                
+                break;
+            case 'selector':
+            
+                break;
+        }
+        
+   }
+}
+
