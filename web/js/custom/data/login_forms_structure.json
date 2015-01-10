@@ -149,7 +149,12 @@
         },{
             "id":16,
             "name":"loginButtonDiv",
-            "func":"$('<div/>').addClass('small-6 columns login-button-div');"
+            "type":"div",
+            "class":[
+                "small-6",
+                "columns",
+                "login-button-div"
+            ]
         },{
             "id":17,
             "name":"loginButton",

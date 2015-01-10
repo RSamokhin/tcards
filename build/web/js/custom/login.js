@@ -27,7 +27,7 @@ $('.register-button').bind('click',function(){
         buildRegisterInterface();
 });
 function getStructureData(url){
-    structure = {};
+    var structure = {};
     $.ajax({
         url:('../js/custom/data/'+url+'.json'),
         async:false,
@@ -51,7 +51,7 @@ function formSructureSet(structure,set){
             case 'link':
                 structure.fieldsArray.forEach(function(e){
                     if(e.id===el.el){
-                        newEl = createElement(e);
+                        var newEl = createElement(e);
                         (newEl).appendTo(parent);
                         (el.children)?el.children.forEach(function(r){
                             createStructureTree(r,newEl);
@@ -67,7 +67,7 @@ function formSructureSet(structure,set){
         }
    }
    function createElement(e){
-       el = $('<'+e.type+'/>');
+       var el = $('<'+e.type+'/>');
        (e.name)?el.attr('name',e.name):{};
        (e.class)?e.class.forEach(function(r){
            el.addClass(r);
