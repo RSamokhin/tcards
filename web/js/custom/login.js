@@ -104,9 +104,13 @@ function formSructureSet(structure,set){
         switch(el.type){
             case 'link':
                 structure.fieldsArray.forEach(function(e){
-                    if(e.id===el.el)
-                        (createElement(e)).appendTo(parent);
-                        
+                    if(e.id===el.el){
+                        newEl = createElement(e);
+                        (newEl).appendTo(parent);
+                        (el.children)?el.children.forEach(function(r){
+                            createStructureTree(r,newEl);
+                        }):{};
+                    }
                 });                
                 break;
             case 'selector':

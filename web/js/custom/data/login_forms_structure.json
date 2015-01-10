@@ -77,7 +77,7 @@
                 "columns",
                 "login-block-label"
             ],
-            "html":"'Login your account'"
+            "html":"Login your account"
         },{
             "id":10,
             "name":"loginBlockEmail",
