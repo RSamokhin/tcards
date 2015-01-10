@@ -7,7 +7,7 @@
             "class":[
                 "label-icon"
             ],
-            "html":"'TCards'"
+            "html":"TCards"
         },{
             "id":2,
             "name":"birdDiv",
@@ -165,7 +165,7 @@
                     "value":"#"
                 }
             ],
-            "html":"'Log In'"
+            "html":"Log In"
         },{
             "id":18,
             "name":"registerButtonDiv",
@@ -190,7 +190,7 @@
                     "value":"#"
                 }
             ],
-            "html":"'Register'"
+            "html":"Register"
         },{
             "id":20,
             "name":"loginBlockBotOffset",
@@ -209,7 +209,7 @@
             "class":[
                 "login-block-bot-footer"
             ],
-            "html":"'Translation Cards by SRG &copy; '+new Date().getFullYear()"
+            "html":"Translation Cards by SRG &copy; 2015</script>"
         }
     ],
     "fieldSets":[

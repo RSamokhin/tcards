@@ -54,24 +54,7 @@ buildLoginInterface();
 function buildLoginInterface(){
     pageType='login';
     $('.main-block-row').remove();
-    mainBlockRow.appendTo($('body'));
-    mainBlockDiv.appendTo(mainBlockRow);
-    loginBlockRow.appendTo(mainBlockDiv);
-    loginBlockTopOffset.appendTo(loginBlockRow);
-    loginBlockDiv.appendTo(loginBlockRow);
-    loginBlockBotOffset.appendTo(loginBlockRow);
-    loginBlockInnerRow.appendTo(loginBlockDiv);
-    loginBlockLabel.appendTo(loginBlockInnerRow);
-    loginBlockEmail.appendTo(loginBlockInnerRow);
-    loginBlockPwd.appendTo(loginBlockInnerRow);
-    loginBlockEmailInput.appendTo(loginBlockEmail);
-    loginBlockPwdInput.appendTo(loginBlockPwd);
-    loginBlockHr.appendTo(loginBlockInnerRow);
-    loginBlockButtonsRow.appendTo(loginBlockInnerRow);
-    loginButtonDiv.appendTo(loginBlockButtonsRow);
-    registerButtonDiv.appendTo(loginBlockButtonsRow);
-    loginButton.appendTo(loginButtonDiv);
-    registerButton.appendTo(registerButtonDiv);
+    formSructureSet(pageStructure,'loginFieldSet');
 }
 function buildRegisterInterface(){
     $('.main-block-row').remove();
@@ -93,6 +76,7 @@ $('.register-button').bind('click',function(){
 
 pageStructure = getStructureData('login_forms_structure');
 formSructureSet(pageStructure,'defaultFieldSet');
+buildLoginInterface();
 
 function getStructureData(url){
     structure = {};
@@ -107,32 +91,42 @@ function getStructureData(url){
 }
 
 function formSructureSet(structure,set){
-   for(var cset in structure['fieldSets']){
-       if ((structure['fieldSets'])[cset]["name"]===set){
-           tset = (structure['fieldSets'])[cset]['set'];
-           tset.forEach(function(el){
+    structure.fieldSets.forEach(function(e){
+        if (e.name===set){
+            e.set.forEach(function(el){
                createStructureTree(el);
            });
-       }
-   }
+        }
+    });
+
    function createStructureTree(el,parent){
         parent = parent || '';
-        switch(el['type']){
+        switch(el.type){
             case 'link':
-                for(var field in structure.fieldsArray){
-                    if(structure.fieldsArray[field]['id']===el['el']){
+                structure.fieldsArray.forEach(function(e){
+                    if(e.id===el.el)
+                        (createElement(e)).appendTo(parent);
                         
-                        break;
-                    }
-                }
-                
-                
+                });                
                 break;
             case 'selector':
-            
+                el.children.forEach(function(e){
+                    createStructureTree(e,$(el.el));
+                });
                 break;
         }
-        
+   }
+   function createElement(e){
+       el = $('<'+e.type+'/>');
+       (e.name)?el.attr('name',e.name):{};
+       (e.class)?e.class.forEach(function(r){
+           el.addClass(r);
+       }):{};
+       (e.attr)?e.attr.forEach(function(r){
+           el.attr(r.name,r.value);
+       }):{};
+       (e.html)?el.html(e.html):{};
+       return el;
    }
 }
 
