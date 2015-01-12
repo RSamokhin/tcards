@@ -11,7 +11,7 @@ and open the template in the editor.
     height: 100%;
 }
 body{
-    overflow: hidden;
+    /* overflow: hidden; */
    /* background-image: url('../../images/custom/custom-background sign.png');
     background-repeat: no-repeat;
     background-position: left top;
@@ -100,4 +100,10 @@ body{
 .forgot-psw-label{
     position: absolute;
     right: 1rem;
+    cursor:pointer;
+}
+.recover-psw-label{
+    position: absolute;
+    right: 1rem;
+    cursor:pointer;
 }

@@ -288,6 +288,26 @@
                 "alert",
                 "forgot-psw-label"
             ]
+        },{
+            "id":29,
+            "name":"recoverBlockLabel",
+            "type":"div",
+            "class":[
+                "small-12",
+                "columns",
+                "login-block-label"
+            ],
+            "html":"Recover my account"
+        },{
+            "id":30,
+            "name":"successRecoverPasswordLabel",
+            "type":"span",
+            "html":"Recover it",
+            "class":[
+                "label",
+                "success",
+                "recover-psw-label"
+            ]
         }
     ],
     "fieldSets":[
@@ -443,6 +463,110 @@
                                                                     "children":[
                                                                         {
                                                                             "el":13,
+                                                                            "type":"link"
+                                                                        }
+                                                                    ]
+                                                                },{
+                                                                    "el":15,
+                                                                    "type":"link"
+                                                                },{
+                                                                    "el":14,
+                                                                    "type":"link",
+                                                                    "children":[
+                                                                        {
+                                                                            "el":16,
+                                                                            "type":"link",
+                                                                            "children":[
+                                                                                {
+                                                                                    "el":17,
+                                                                                    "type":"link"
+                                                                                }
+                                                                            ]
+                                                                        },{
+                                                                            "el":18,
+                                                                            "type":"link",
+                                                                            "children":[
+                                                                                {
+                                                                                    "el":19,
+                                                                                    "type":"link"
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                },{
+                                                    "el":20,
+                                                    "type":"link"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },{
+            "name":"recoverFieldSet",
+            "set":[
+                {
+                    "el":"body",
+                    "type":"selector",
+                    "children":[
+                        {
+                            "el":3,
+                            "type":"link",
+                            "children":[
+                                {
+                                    "el":4,
+                                    "type":"link",
+                                    "children":[
+                                        {
+                                            "el":5,
+                                            "type":"link",
+                                            "children":[
+                                                {
+                                                    "el":26,
+                                                    "type":"link"
+                                                },{
+                                                    "el":27,
+                                                    "type":"link",
+                                                    "children":[
+                                                        {
+                                                            "el":8,
+                                                            "type":"link",
+                                                            "children":[
+                                                                {
+                                                                    "el":29,
+                                                                    "type":"link"
+                                                                },{
+                                                                    "el":10,
+                                                                    "type":"link",
+                                                                    "children":[
+                                                                        {
+                                                                            "el":12,
+                                                                            "type":"link"
+                                                                        },{
+                                                                            "el":24,
+                                                                            "type":"link"
+                                                                        },{
+                                                                            "el":25,
+                                                                            "type":"link"
+                                                                        }
+                                                                    ]
+                                                                },{
+                                                                    "el":11,
+                                                                    "type":"link",
+                                                                    "children":[
+                                                                        {
+                                                                            "el":13,
+                                                                            "type":"link"
+                                                                        },{
+                                                                            "el":30,
                                                                             "type":"link"
                                                                         }
                                                                     ]

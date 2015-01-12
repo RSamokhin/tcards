@@ -20,6 +20,11 @@ function buildRegisterInterface(){
     pageType='register';
     formSructureSet(pageStructure,'registerFieldSet');
 }
+function buildRecoverInterface(){
+    $('.main-block-row').remove();
+    pageType='register';
+    formSructureSet(pageStructure,'recoverFieldSet');
+}
 $( "body" ).on( "click", ".login-button",function(){
     if(pageType!=='login')
         buildLoginInterface();
@@ -27,4 +32,8 @@ $( "body" ).on( "click", ".login-button",function(){
 $( "body" ).on( "click", ".register-button",function(){
     if(pageType!=='register')
         buildRegisterInterface();
+});
+$( "body" ).on( "click", ".forgot-psw-label",function(){
+    if(pageType!=='recover')
+        buildRecoverInterface();
 });
