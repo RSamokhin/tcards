@@ -278,6 +278,16 @@
                 "small-offset-2",
                 "register-block-div"
             ]
+        },{
+            "id":28,
+            "name":"recoverPasswordLabel",
+            "type":"span",
+            "html":"Forgot it",
+            "class":[
+                "label",
+                "alert",
+                "forgot-psw-label"
+            ]
         }
     ],
     "fieldSets":[
@@ -329,6 +339,9 @@
                                                                     "children":[
                                                                         {
                                                                             "el":13,
+                                                                            "type":"link"
+                                                                        },{
+                                                                            "el":28,
                                                                             "type":"link"
                                                                         }
                                                                     ]

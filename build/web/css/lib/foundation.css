@@ -4580,7 +4580,9 @@ dialog {
     border-radius: 1000px; }
   .label.alert {
     background-color: #f04124;
-    color: #FFFFFF; }
+    color: #FFFFFF; 
+    cursor: pointer;
+}
   .label.warning {
     background-color: #f08a24;
     color: #FFFFFF; }
