@@ -13,16 +13,18 @@ function buildLoginInterface(){
     pageType='login';
     $('.main-block-row').remove();
     formSructureSet(pageStructure,'loginFieldSet');
+    
 }
 function buildRegisterInterface(){
     $('.main-block-row').remove();
     pageType='register';
+    formSructureSet(pageStructure,'registerFieldSet');
 }
-$('.login-button').bind('click',function(){
+$( "body" ).on( "click", ".login-button",function(){
     if(pageType!=='login')
         buildLoginInterface();
-});
-$('.register-button').bind('click',function(){
+}); 
+$( "body" ).on( "click", ".register-button",function(){
     if(pageType!=='register')
         buildRegisterInterface();
 });

@@ -3,10 +3,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/Users/rsamokhin/NetBeansProjects/tcards/web/jsp/login.jsp</file>
-            <file>file:/Users/rsamokhin/NetBeansProjects/tcards/web/js/custom/login.js</file>
+            <file>file:/Users/rsamokhin/NetBeansProjects/tcards/web/js/custom/form_constructor.js</file>
             <file>file:/Users/rsamokhin/NetBeansProjects/tcards/web/css/custom/login.css</file>
-            <file>file:/Users/rsamokhin/NetBeansProjects/tcards/web/js/custom/data/login_forms_structure.json</file>
+            <file>file:/Users/rsamokhin/NetBeansProjects/tcards/web/js/custom/login.js</file>
         </group>
     </open-files>
 </project-private>
