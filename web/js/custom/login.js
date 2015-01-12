@@ -22,7 +22,7 @@ function buildRegisterInterface(){
 }
 function buildRecoverInterface(){
     $('.main-block-row').remove();
-    pageType='register';
+    pageType='recover';
     formSructureSet(pageStructure,'recoverFieldSet');
 }
 $( "body" ).on( "click", ".login-button",function(){

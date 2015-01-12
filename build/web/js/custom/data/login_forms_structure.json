@@ -256,6 +256,9 @@
                 },{
                     "name":"placeholder",
                     "value":"Token"
+                },{
+                    "name":"disabled",
+                    "value":"disabled"
                 }
             ]
         },{
@@ -307,6 +310,26 @@
                 "label",
                 "success",
                 "recover-psw-label"
+            ]
+        },{
+            "id":31,
+            "name":"registerBlockPwdInput",
+            "type":"input",
+            "class":[
+                "login-input",
+                "pwd-input"
+            ],
+            "attr":[
+                {
+                    "name":"type",
+                    "value":"password"
+                },{
+                    "name":"placeholder",
+                    "value":"Password"
+                },{
+                    "name":"disabled",
+                    "value":"disabled"
+                }
             ]
         }
     ],
@@ -462,7 +485,7 @@
                                                                     "type":"link",
                                                                     "children":[
                                                                         {
-                                                                            "el":13,
+                                                                            "el":31,
                                                                             "type":"link"
                                                                         }
                                                                     ]
@@ -563,7 +586,7 @@
                                                                     "type":"link",
                                                                     "children":[
                                                                         {
-                                                                            "el":13,
+                                                                            "el":31,
                                                                             "type":"link"
                                                                         },{
                                                                             "el":30,
